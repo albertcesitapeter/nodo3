@@ -113,7 +113,7 @@ app.post("/creatematch", urlencodedParser, (req,res) => {
   for(let i = 0; i < portlist.length; i++){
     let options = {
       method: "POST",
-      uri: "http://" + portlist[i] + "/newmatch",
+      uri:   portlist[i] + "/newmatch",
       resolveWithFullResponse: true,
       json: true,
       body: match 
@@ -171,7 +171,7 @@ app.put("/matches/:id", urlencodedParser, (req,res) => {
   for(let i = 0; i < portlist.length; i++){
     let options = {
       method: "POST",
-      uri: "http://" + portlist[i] + "/matches/"+id+"/join",
+      uri:   portlist[i] + "/matches/"+id+"/join",
       resolveWithFullResponse: true,
       json: true,
       body: currentMatch
@@ -241,7 +241,7 @@ app.post("/matches/:id/distribute", urlencodedParser, (req,res) => {
   for(let i = 0; i < portlist.length; i++){
     let options = {
       method: "POST",
-      uri: "http://" + portlist[i] + "/matches/"+id+"/distributed",
+      uri:   portlist[i] + "/matches/"+id+"/distributed",
       resolveWithFullResponse: true,
       json: true,
       body: piecesPlayers
@@ -336,7 +336,7 @@ app.post("/matches/:id/playpiece", urlencodedParser, (req,res) => {
   for(let i = 0; i < portlist.length; i++){
     let options = {
       method: "POST",
-      uri: "http://" + portlist[i] + "/matches/playedpiece",
+      uri:   portlist[i] + "/matches/playedpiece",
       resolveWithFullResponse: true,
       json: true,
       body: matches
