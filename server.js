@@ -14,7 +14,7 @@ const port = process.env.PORT;
 var nextplayer = process.env.NEXT;
 
 //arreglo de puertos
-var portlist = ["localhost:10001","localhost:10002","localhost:10003"];
+var portlist = ["https://nodo1.herokuapp.com","https://nodo2.herokuapp.com","https://nodo3.herokuapp.com"];
 
 var app = express();
 
